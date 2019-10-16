@@ -1,5 +1,6 @@
 const { Command } = require('../../lib/Command.js');
-const command = new Command( ['repl'], 0, 5000, async function ( { msg, args } ) {
+// eslint-disable-next-line no-magic-numbers
+const command = new Command( ['repl'], 0, 15000, async function ( { msg, args } ) {
     const aliases = await this.utils.getChiasmAliases(this);
     if (!aliases.includes(args[0] ) ) {
         return this.sendMsg(msg.channel, 'That language isn\'t valid.', 'error');
