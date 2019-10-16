@@ -51,7 +51,7 @@ function checkPermissions(msg) {
     return authorPermLevel;
 }
 
-client.bot.on('messageCreate', (msg) => {
+client.bot.on('messageCreate', async(msg) => {
     checkRepl(msg);
     if (!msg.content.startsWith(client.prefix) || msg.author.bot) {
         return;
@@ -69,7 +69,11 @@ client.bot.on('messageCreate', (msg) => {
     if (!timeout.get(msg.author.id) || (foundCommand.timeout + timeout.get(msg.author.id) ) < Date.now() ) {
         timeout.set(msg.author.id, Date.now() );
     } else {
-        foundCommand.sendMsg(msg.channel, `<@${msg.author.id}> You're using commands too quickly.`, 'error');
+        const message = await foundCommand.sendMsg(msg.channel, `<@${msg.author.id}> You're using commands too quickly.`, 'error');
+        setTimeout( () => {
+            message.delete();
+        // eslint-disable-next-line no-magic-numbers
+        }, 3000);
         return;
     }
     foundCommand.execute( { msg, args } );
