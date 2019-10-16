@@ -1,7 +1,7 @@
 const { Command } = require('../../lib/Command.js');
 const git = require('../../package.json').repository.url;
 const { discord } = require('../../config.json');
-const command = new Command( ['stats'], 0, function ( { msg } ) {
+const command = new Command( ['stats'], 0, 5000, function ( { msg } ) {
     // eslint-disable-next-line no-magic-numbers
     const memoryUsage = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const cpu = require('os').cpus().map(i => i.model);

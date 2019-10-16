@@ -1,6 +1,6 @@
 const { Command } = require('../../lib/Command.js');
 // eslint-disable-next-line consistent-return
-const command = new Command( ['eval', 'e'], 2, async function ( { msg, args } ) {
+const command = new Command( ['eval', 'e'], 2, 1000, async function ( { msg, args } ) {
     let evaled;
     const flags = this.utils.resolveFlags(args, [] );
     if (flags.map(i => i.flagName).includes('files.gg') ) {

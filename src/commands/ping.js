@@ -3,7 +3,7 @@ const command = new Command( [
     'ping',
     'pong',
     'pang',
-], 0, async function ( { msg } ) {
+], 0, 1000, async function ( { msg } ) {
     const start = Date.now();
     const message = await this.sendMsg(msg.channel, 'Pong!');
     if (!message) {

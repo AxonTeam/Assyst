@@ -19,6 +19,8 @@
   "homepage": "https://github.com/AxonTeam/Assyst#readme",
   "dependencies": {
     "@axonteam/eslint-config": "^2.2.0",
-    "eslint": "^6.4.0"
+    "eslint": "^6.4.0",
+    "eris": "^0.10.1",
+    "quick.db": "^7.0.0-b22"
   }
 }

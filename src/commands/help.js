@@ -1,5 +1,5 @@
 const { Command } = require('../../lib/Command.js');
-const command = new Command( ['help'], 0, function ( { msg, args } ) {
+const command = new Command( ['help'], 0, 1000, function ( { msg, args } ) {
     if (args.length < 1) {
         const commands = [];
         const fields = [];

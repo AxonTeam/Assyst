@@ -1,6 +1,8 @@
 const { Assyst } = require('./lib/Assyst.js');
 const config = require('./config.json');
 const client = new Assyst(config);
+const db = require("quick.db");
+const timeout = new db.table("timeout");
 
 console.log('Starting Assyst');
 
@@ -62,6 +64,8 @@ client.bot.on('messageCreate', (msg) => {
     if (foundCommand.permissions > authorPermLevel) {
         return;
     }
+    if (!db.get(msg.author.id) || (foundCommand.timeout + db.get(msg.author.id)) < Date.now()) db.set(msg.author.id, Date.now());
+    else return; // or give timeout warnings
     foundCommand.execute( { msg, args } );
 } );
 
