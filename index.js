@@ -68,8 +68,9 @@ client.bot.on('messageCreate', (msg) => {
     if (!timeout.get(msg.author.id) || (foundCommand.timeout + timeout.get(msg.author.id) ) < Date.now() ) {
         db.set(msg.author.id, Date.now() );
     } else {
+        foundCommand.sendMsg(msg.channel, `<@${msg.author.id}> You're using commands too quickly.`, 'error');
         return;
-    } // or give timeout warnings
+    }
     foundCommand.execute( { msg, args } );
 } );
 
