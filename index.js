@@ -3,7 +3,8 @@ const config = require('./config.json');
 const client = new Assyst(config);
 // eslint-disable-next-line no-shadow
 const db = require('quick.db');
-const timeout = new db.Table('timeout');
+// eslint-disable-next-line new-cap
+const timeout = new db.table('timeout');
 
 console.log('Starting Assyst');
 
