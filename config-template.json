@@ -1,0 +1,30 @@
+{
+    "client": {
+        
+        "prefix": "",
+
+        "staff": {
+            "owners": ["user id"],
+            "admins": ["user id"],
+            "contributors": ["user id"]
+        },
+
+        "info": {
+            "description": "",
+            "version": ""
+        },
+
+        "emotes": {
+            "success": "<:name:ID>",
+            "error": "<:name:ID>",
+            "loading": "<:name:ID>",
+            "info": "<:name:ID>"
+        },
+
+        "tokens": {
+            "bot": ""
+        }
+    },
+    "discord": "code",
+    "chiasmIP": "127.0.0.1:4840"
+}

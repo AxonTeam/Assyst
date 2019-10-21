@@ -1,2 +1,4 @@
 # Asysst
-Dev-helper bot. Mainly to interact with ChiasmAPI, it's all in one bot to facilitate developers life
+A utilitarian bot designed to ease the work of developers using Discord by providing a rich environment in which to test code, load Git pages, and more.
+
+An AxonTeam project. Work in progress.

@@ -1,0 +1,26 @@
+{
+  "name": "assyst",
+  "version": "1.0.0",
+  "description": "A utilitarian bot designed to ease the work of developers using Discord by providing a rich environment in which to test code, load Git pages, and more.",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "pm2run": "node run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AxonTeam/Assyst.git"
+  },
+  "author": "Jacherr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AxonTeam/Assyst/issues"
+  },
+  "homepage": "https://github.com/AxonTeam/Assyst#readme",
+  "dependencies": {
+    "@axonteam/eslint-config": "^2.2.0",
+    "eslint": "^6.4.0",
+    "eris": "^0.10.1",
+    "quick.db": "^7.0.0-b22"
+  }
+}
